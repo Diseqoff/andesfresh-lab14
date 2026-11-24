@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/layout :: head('Inicio')}"></head>
+<body>
+  <nav th:replace="~{fragments/layout :: navbar}"></nav>
+ 
+  <main class="container">
+    <h1 class="text-center mb-4">Bienvenido a la aplicación</h1>
+    <p class="text-center text-muted">Portal interno de Distribuidora Andes Fresh S.A.C.</p>
+ 
+    <div class="row g-3 mt-2">
+      <div class="col-md-4">
+        <div class="card h-100"><div class="card-body">
+          <h5 class="card-title">Productos</h5>
+          <p class="card-text">Catálogo y búsqueda por marca y categoría.</p>
+          <a class="btn btn-success" th:href="@{/productos}">Ver catálogo</a>
+        </div></div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100"><div class="card-body">
+          <h5 class="card-title">Empleados</h5>
+          <p class="card-text">Registro y listado del personal de almacén.</p>
+          <a class="btn btn-success" th:href="@{/empleados}">Ver empleados</a>
+        </div></div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100"><div class="card-body">
+          <h5 class="card-title">Reportes</h5>
+          <p class="card-text">Exportación a CSV, Excel y PDF.</p>
+          <a class="btn btn-success" th:href="@{/consultas/resumen}">Ver resumen</a>
+        </div></div>
+      </div>
+    </div>
+  </main>
+ 
+  <th:block th:replace="~{fragments/layout :: scripts}"></th:block>
+</body>
+</html>

@@ -1,0 +1,16 @@
+/* Identidad visual de Andes Fresh (la misma de los laboratorios 12 y 13) */
+body { font-family: Arial, sans-serif; background: #f4f6fb; color: #1B2B6B; }
+.navbar.bg-dark { background: #1B2B6B !important; }
+.navbar .navbar-brand, .navbar .nav-link { color: #fff !important; }
+.dropdown-item:active { background: #F7941D; }
+h1, h2, .text-primary, .card-title { color: #1B2B6B !important; }
+.table { background: #fff; }
+.table-dark, .table-dark th, .table > thead.table-dark > tr > th {
+  --bs-table-bg: #F7941D; background: #F7941D !important; color: #fff !important; border-color: #F7941D;
+}
+.btn-success { background: #1B2B6B; border-color: #1B2B6B; }
+.btn-success:hover { background: #F7941D; border-color: #F7941D; }
+.btn-outline-success { color: #1B2B6B; border-color: #1B2B6B; }
+.btn-outline-success:hover { background: #1B2B6B; color: #fff; }
+.card { border: 0; border-top: 5px solid #F7941D; }
+.card-header { background: #fff; color: #1B2B6B; font-weight: bold; }

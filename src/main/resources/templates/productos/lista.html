@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/layout :: head('Catálogo')}"></head>
+<body>
+  <nav th:replace="~{fragments/layout :: navbar}"></nav>
+ 
+  <main class="container">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <h2>Catálogo de productos</h2>
+      <div>
+        <a class="btn btn-outline-success btn-sm" th:href="@{/reportes/csv}">CSV</a>
+        <a class="btn btn-outline-success btn-sm" th:href="@{/reportes/excel}">Excel</a>
+        <a class="btn btn-outline-danger btn-sm" th:href="@{/reportes/pdf}" target="_blank">PDF</a>
+      </div>
+    </div>
+    <table class="table table-striped">
+      <thead class="table-dark">
+        <tr><th>ID</th><th>Nombre</th><th>Marca</th><th>Categoría</th><th>Precio</th><th>Cantidad</th></tr>
+      </thead>
+      <tbody>
+        <tr th:each="p : ${productos}">
+          <td th:text="${p.id}"></td>
+          <td th:text="${p.nombre}"></td>
+          <td th:text="${p.marca}"></td>
+          <td th:text="${p.categoria}"></td>
+          <td th:text="${#numbers.formatDecimal(p.precio, 1, 2)}"></td>
+          <td th:text="${p.cantidad}"></td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+ 
+  <th:block th:replace="~{fragments/layout :: scripts}"></th:block>
+</body>
+</html>
